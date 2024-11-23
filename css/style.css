@@ -6,13 +6,17 @@ body {
 	width: auto;
 }
 body #page {
-	background: url("../images/bg-home.jpg") no-repeat scroll center top #000000;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
-	z-index: 3;
+    background: url("../images/bg-home.jpg") no-repeat center top #000000;
+    background-size: cover;  /* Ensures the background covers the entire container */
+    background-position: center center;  /* Center the image */
+    background-attachment: fixed;  /* Optional: makes the background fixed while scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100%;  /* Ensures the container takes the full width */
+    min-height: 100vh;  /* Ensures the page covers at least the full viewport height */
+    z-index: 3;
 }
+
 a {
 	text-decoration: none;
 	outline: none;
@@ -31,118 +35,140 @@ img {
 }
 /*----------------------------------------header-styles---------------------------------------*/
 #header {
-	background: url(../images/bg-transparent1.png) repeat;
-	margin: 0;
-	min-height: 60px;
-	padding: 0;
-	width: auto;
+    background: url(../images/bg-transparent1.png) repeat;
+    margin: 0;
+    min-height: 60px;
+    padding: 0;
+    width: auto;
+    overflow: hidden; /* Prevent overflow issues */
 }
+
 #header div {
-	margin: 0 auto;
-	max-width: 940px;
-	min-height: 60px;
-	padding: 0 10px;
+    margin: 0 auto;
+    max-width: 940px;
+    min-height: 60px;
+    padding: 0 10px;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Distribute space */
 }
+
 #header div a.logo {
-	display: block;
-	float: left;
-	height: 60px;
-	margin: 0 44px 0 0;
-	padding: 0;
-	width: 304px;
+    display: block;
+    height: 60px; /* Set height for the logo container */
+    width: auto; /* Width adjusts to the image */
+    margin-right: 20px; /* Space between logo and text */
 }
-#header div a img {
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: auto;
+
+#header div a.logo img {
+    height: 100%; /* Ensure the logo fits the container height */
+    width: auto; /* Maintain image aspect ratio */
+    display: block; /* Prevent layout issues */
 }
+
+.header-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Adjust text size */
+    font-weight: bold; /* Optional: Bold text */
+    color: #ffffff; /* Text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-right: 20px; /* Space between text and navigation */
+}
+
 #header div ul {
-	display: inline-block;
-	float: left;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: auto;
+    display: flex; /* Display navigation links in a row */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 #header div ul li {
-	float: left;
-	margin: 0;
-	padding: 0;
-	width: auto;
+    margin: 0;
+    padding: 0;
 }
+
 #header div ul li a {
-	color: #ffffff;
-	display: block;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 59px;
-	margin: 0;
-	min-height: 60px;
-	padding: 0 24px;
-	text-align: center;
-	text-transform: uppercase;
-	width: auto;
+    color: #ffffff;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 60px; /* Align with header height */
+    padding: 0 24px; /* Spacing around navigation items */
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
 }
+
 #header div ul li a:hover {
-	background-color: #620031;
-	color: #ffffff;
+    background-color: #620031;
+    color: #ffffff;
 }
+
 #header div ul li.selected a {
-	background-color: #000000;
-	color: #a3a3a3;
+    background-color: #000000;
+    color: #a3a3a3;
 }
+
 #header div ul li.menu {
-	position: relative;
+    position: relative;
 }
+
 #header div ul li.menu ul {
-	display: block;
-	left: -99999px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 60px;
-	width: 142px;
-	z-index: 50;
+    display: block;
+    left: -99999px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    width: 142px;
+    z-index: 50;
 }
+
 #header div ul li.menu:hover ul.primary {
-	left: 31px;
+    left: 31px;
 }
+
 #header div ul li.menu ul.primary.selected {
-	left: 31px;
+    left: 31px;
 }
+
 #header div ul li.menu:hover ul.secondary {
-	left: -20px;
+    left: -20px;
 }
+
 #header div ul li.menu ul.secondary.selected {
-	left: -20px;
+    left: -20px;
 }
+
 #header div ul li.menu ul li {
-	margin: 0;
-	padding: 0;
-	width: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
+
 #header div ul li.menu ul li a {
-	background-color: #620031;
-	color: #ffffff;
-	display: block;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 60px;
-	margin: 0;
-	min-height: 60px;
-	padding: 0 10px;
-	text-align: center;
-	text-transform: uppercase;
-	width: auto;
+    background-color: #620031;
+    color: #ffffff;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 60px;
+    margin: 0;
+    min-height: 60px;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: auto;
 }
+
 #header div ul li.menu ul.primary.selected li a, #header div ul li.menu ul.secondary.selected li a {
-	background-color: #000000;
-	color: #a3a3a3;
+    background-color: #000000;
+    color: #a3a3a3;
 }
+
 /*----------------------------------------body-home-styles---------------------------------------*/
 #body {
 	background-color: #000000;
@@ -175,14 +201,16 @@ img {
 	position: relative;
 }
 #body.home .header div img.satellite {
-	display: block;
-	left: 10px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 41px;
-	width: auto;
-	z-index: 50;
+    display: block;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 41px;
+    width: auto;
+    max-height: 100px; /* Set a max height for the logo */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 50;
 }
 #body.home .header div h1 {
 	color: #FFFFFF;
