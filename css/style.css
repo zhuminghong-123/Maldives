@@ -200,19 +200,31 @@ img {
 	padding: 0 10px;
 	position: relative;
 }
-#body.home .header div img.satellite {
+
+#body.home .header div::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 98%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* #body.home .header div img.satellite {
     display: block;
     left: 10px;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 41px;
-    width: auto;
-    max-height: 100px; /* Set a max height for the logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 40%;
+    height: 60%;
     z-index: 50;
-}
-#body.home .header div h1 {
+} */
+
+/* #body.home .header div h1 {
 	color: #FFFFFF;
 	display: block;
 	float: right;
@@ -225,6 +237,7 @@ img {
 	position: relative;
 	text-align: right;
 	text-transform: uppercase;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 	width: 503px;
 	z-index: 60;
 }
@@ -243,8 +256,43 @@ img {
 	text-transform: uppercase;
 	width: 288px;
 	z-index: 60;
+} */
+
+#body.home .header div h1 {
+	display: block;
+	position: relative;
+    color: #FFFFFF;
+    font-family: audiowide-regular-webfont;
+    font-size: 80px;  /* 增加字体大小 */
+    font-weight: normal;
+    line-height: 90px;  /* 调整行高，增加可读性 */
+    margin: 100px 0 20px;  /* 增加上下间距，使其不至于紧凑 */
+    padding: 0 20px;  /* 去掉过多的内边距，使标题宽度更加自适应 */
+    text-align: center;  /* 居中对齐 */
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);  /* 增强阴影效果 */
+    width: 100%;  /* 宽度占满父容器 */
+    z-index: 60;
 }
-#body.home .header div a.more {
+
+#body.home .header div h2 {
+	display: block;
+	position: relative;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 50px;  /* 调整字号，稍大于默认值 */
+    font-weight: normal;
+    line-height: 50px;  /* 保持一致的行高 */
+    margin: 0 0 40px;  /* 上下间距调整 */
+    padding: 0 20px;  /* 去掉多余的内边距 */
+    text-align: center;  /* 居中对齐 */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* 适度的阴影 */
+    width: 100%;  /* 宽度占满父容器 */
+    z-index: 60;
+}
+
+/* #body.home .header div a.more {
 	background-color: #000000;
 	color: #a3a3a3;
 	display: block;
@@ -265,7 +313,32 @@ img {
 #body.home .header div a.more:hover {
 	background-color: #ab000b;
 	color: #ffffff;
+} */
+
+#body.home .header div a.more {
+    background-color: #000000;
+    color: #a3a3a3;
+    display: block;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: normal;
+    height: 49px;
+    line-height: 49px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute; /* 使用绝对定位 */
+    left: 50%;  /* 水平居中 */
+    transform: translateX(-50%); /* 通过translateX调整完美居中 */
+    width: 180px;
+    z-index: 55;
 }
+
+#body.home .header div a.more:hover {
+    background-color: #ab000b;
+    color: #ffffff;
+}
+
 #body.home .header div h3 {
 	background: url("../images/bg-transparent1.png") repeat;
 	color: #A3A3A3;
@@ -315,7 +388,9 @@ img {
 	display: block;
 	margin: 0;
 	padding: 0;
-	width: auto;
+    width: 100%;        /* Make the image fill the width of the container */
+    height: 100%;       /* Make the image fill the height of the container */
+    object-fit: cover;  /* Ensures the image covers the entire area of the container without distortion */
 }
 #body.home .header div ul li a img:hover {
 	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
