@@ -247,6 +247,98 @@ img {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加阴影效果 */
 }
 
+/* Quiz box styling */
+#quiz-container {
+    position: absolute;
+    top: 260px; /* Adjusted to place it below the weather box */
+    right: 20px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(128, 208, 199, 0.8); /* Set background with rgba for transparency */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 100;
+    width: 380px; /* Limit width so it doesn't cover too much space */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adjust to leave space for result */
+}
+
+/* Title styling */
+#quiz-container h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+}
+
+/* Text in the quiz */
+#quiz-container p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+}
+
+/* Styling for form and button */
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px; /* Reduced margin to create less space between form and result */
+}
+
+#quiz-form label {
+    font-size: 14px;
+    margin-bottom: 5px; /* Reduced margin to create less space between labels and selects */
+    color: white; /* Changed label color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+}
+
+#quiz-form select {
+    font-size: 16px;
+    padding: 8px; /* Slightly reduced padding for smaller size */
+    margin: 3px 0; /* Reduced margin to create less space between selects */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#quiz-form button {
+    background-color: #00b8b8;
+    color: white;
+    font-size: 18px;
+    padding: 10px 18px; /* Adjusted padding for a more compact button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px; /* Reduced margin to create less space between button and selects */
+}
+
+#quiz-form button:hover {
+    background-color: #007b7b;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007b7b;
+    background-color: #e0f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 80px; /* Fixed height */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    overflow: hidden; /* Hide overflow to prevent scrollbar */
+}
 
 #body.home .header {
 	background: none;
