@@ -1,4 +1,3 @@
-/* Website template by freewebsitetemplates.com */
 body {
 	margin: 0;
 	padding: 0;
@@ -7,13 +6,13 @@ body {
 }
 body #page {
     background: url("../images/bg-home.jpg") no-repeat center top #000000;
-    background-size: cover;  /* Ensures the background covers the entire container */
-    background-position: center center;  /* Center the image */
-    background-attachment: fixed;  /* Optional: makes the background fixed while scrolling */
+    background-size: cover;  
+    background-position: center center;  
+    background-attachment: fixed;  
     margin: 0;
     padding: 0;
-    width: 100%;  /* Ensures the container takes the full width */
-    min-height: 100vh;  /* Ensures the page covers at least the full viewport height */
+    width: 100%;  
+    min-height: 100vh;  
     z-index: 3;
 }
 
@@ -40,7 +39,7 @@ img {
     min-height: 60px;
     padding: 0;
     width: auto;
-    overflow: hidden; /* Prevent overflow issues */
+    overflow: hidden;
 }
 
 #header div {
@@ -48,35 +47,35 @@ img {
     max-width: 940px;
     min-height: 60px;
     padding: 0 10px;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertically align items */
-    justify-content: space-between; /* Distribute space */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #header div a.logo {
     display: block;
-    height: 60px; /* Set height for the logo container */
-    width: auto; /* Width adjusts to the image */
-    margin-right: 20px; /* Space between logo and text */
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
 }
 
 #header div a.logo img {
-    height: 100%; /* Ensure the logo fits the container height */
-    width: auto; /* Maintain image aspect ratio */
-    display: block; /* Prevent layout issues */
+    height: 100%;
+    width: auto;
+    display: block;
 }
 
 .header-text {
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Adjust text size */
-    font-weight: bold; /* Optional: Bold text */
-    color: #ffffff; /* Text color */
-    white-space: nowrap; /* Prevent text from wrapping */
-    margin-right: 20px; /* Space between text and navigation */
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    margin-right: 20px;
 }
 
 #header div ul {
-    display: flex; /* Display navigation links in a row */
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -93,11 +92,11 @@ img {
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: normal;
-    line-height: 60px; /* Align with header height */
-    padding: 0 24px; /* Spacing around navigation items */
+    line-height: 60px;
+    padding: 0 24px;
     text-align: center;
     text-transform: uppercase;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 #header div ul li a:hover {
@@ -224,7 +223,7 @@ img {
     right: 20px;
     text-align: center;
     padding: 20px;
-    background: rgba(128, 208, 199, 0.8); /* 使用 rgba 设置背景颜色和透明度 */
+    background: rgba(128, 208, 199, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     color: white;
@@ -236,7 +235,7 @@ img {
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加阴影效果 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #weather-info p {
@@ -244,26 +243,26 @@ img {
     font-size: 18px;
     margin: 5px 0;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加阴影效果 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Quiz box styling */
 #quiz-container {
     position: absolute;
-    top: 260px; /* Adjusted to place it below the weather box */
+    top: 260px;
     right: 20px;
     text-align: center;
     padding: 20px;
-    background: rgba(128, 208, 199, 0.8); /* Set background with rgba for transparency */
+    background: rgba(128, 208, 199, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     color: white;
     z-index: 100;
-    width: 380px; /* Limit width so it doesn't cover too much space */
+    width: 380px;
     height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Adjust to leave space for result */
+    justify-content: flex-start;
 }
 
 /* Title styling */
@@ -272,7 +271,7 @@ img {
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Text in the quiz */
@@ -281,7 +280,7 @@ img {
     font-size: 18px;
     margin: 5px 0;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Styling for form and button */
@@ -289,20 +288,20 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px; /* Reduced margin to create less space between form and result */
+    margin-bottom: 5px;
 }
 
 #quiz-form label {
     font-size: 14px;
-    margin-bottom: 5px; /* Reduced margin to create less space between labels and selects */
-    color: white; /* Changed label color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for text */
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #quiz-form select {
     font-size: 16px;
-    padding: 8px; /* Slightly reduced padding for smaller size */
-    margin: 3px 0; /* Reduced margin to create less space between selects */
+    padding: 8px;
+    margin: 3px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 80%;
@@ -312,12 +311,12 @@ img {
     background-color: #00b8b8;
     color: white;
     font-size: 18px;
-    padding: 10px 18px; /* Adjusted padding for a more compact button */
+    padding: 10px 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 5px; /* Reduced margin to create less space between button and selects */
+    margin-top: 5px;
 }
 
 #quiz-form button:hover {
@@ -332,39 +331,13 @@ img {
     padding: 10px;
     border-radius: 5px;
     margin-top: 5px;
-    height: 80px; /* Fixed height */
-    text-align: center; /* Center the text horizontally */
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    overflow: hidden; /* Hide overflow to prevent scrollbar */
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-
-/* #body.home .header {
-	background: none;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	width: 100%;
-}
-#body.home .header div {
-	margin: 0 auto;
-	max-width: 940px;
-	overflow: hidden;
-	padding: 0 10px;
-	position: relative;
-}
-
-#body.home .header div::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 10px;
-    width: 98%;
-    height: 60%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-} */
 
 #body.home .header {
     background: none;
@@ -372,7 +345,7 @@ img {
     overflow: hidden;
     padding: 0;
     width: 100%;
-    position: relative; /* 设置相对定位 */
+    position: relative;
 }
 
 #body.home .header::before {
@@ -383,7 +356,7 @@ img {
     width: 51%;
     height: 60%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1; /* 确保遮罩在背景图片之上 */
+    z-index: 1;
 }
 
 #body.home .header div {
@@ -392,69 +365,23 @@ img {
 	overflow: hidden;
 	padding: 0 10px;
 	position: relative;
-    z-index: 2; /* 确保内容在遮罩上方 */
+    z-index: 2;
 }
-
-/* #body.home .header div img.satellite {
-    display: block;
-    left: 10px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 41px;
-    width: 40%;
-    height: 60%;
-    z-index: 50;
-} */
-
-/* #body.home .header div h1 {
-	color: #FFFFFF;
-	display: block;
-	float: right;
-	font-family: audiowide-regular-webfont;
-	font-size: 60px;
-	font-weight: normal;
-	line-height: 60px;
-	margin: 187px 0 27px;
-	padding: 0 38px 0 399px;
-	position: relative;
-	text-align: right;
-	text-transform: uppercase;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-	width: 503px;
-	z-index: 60;
-}
-#body.home .header div h2 {
-	color: #FFFFFF;
-	display: block;
-	float: right;
-	font-family: Arial;
-	font-size: 43px;
-	font-weight: normal;
-	line-height: 43px;
-	margin: 0 0 36px;
-	padding: 0 146px 0 506px;
-	position: relative;
-	text-align: right;
-	text-transform: uppercase;
-	width: 288px;
-	z-index: 60;
-} */
 
 #body.home .header div h1 {
 	display: block;
 	position: relative;
     color: #FFFFFF;
     font-family: audiowide-regular-webfont;
-    font-size: 80px;  /* 增加字体大小 */
+    font-size: 80px;
     font-weight: normal;
-    line-height: 90px;  /* 调整行高，增加可读性 */
-    margin: 100px 0 20px;  /* 增加上下间距，使其不至于紧凑 */
-    padding: 0 20px;  /* 去掉过多的内边距，使标题宽度更加自适应 */
-    text-align: center;  /* 居中对齐 */
+    line-height: 90px;
+    margin: 100px 0 20px;
+    padding: 0 20px;
+    text-align: center;
     text-transform: uppercase;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);  /* 增强阴影效果 */
-    width: 100%;  /* 宽度占满父容器 */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    width: 100%;
     z-index: 60;
 }
 
@@ -463,40 +390,17 @@ img {
 	position: relative;
     color: #FFFFFF;
     font-family: Arial;
-    font-size: 50px;  /* 调整字号，稍大于默认值 */
+    font-size: 50px;
     font-weight: normal;
-    line-height: 50px;  /* 保持一致的行高 */
-    margin: 0 0 40px;  /* 上下间距调整 */
-    padding: 0 20px;  /* 去掉多余的内边距 */
-    text-align: center;  /* 居中对齐 */
+    line-height: 50px;
+    margin: 0 0 40px;
+    padding: 0 20px;
+    text-align: center;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* 适度的阴影 */
-    width: 100%;  /* 宽度占满父容器 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
     z-index: 60;
 }
-
-/* #body.home .header div a.more {
-	background-color: #000000;
-	color: #a3a3a3;
-	display: block;
-	float: right;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	height: 49px;
-	line-height: 49px;
-	margin: 0 200px 0 0;
-	padding: 0;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-	width: 180px;
-	z-index: 55;
-}
-#body.home .header div a.more:hover {
-	background-color: #ab000b;
-	color: #ffffff;
-} */
 
 #body.home .header div a.more {
     background-color: #000000;
@@ -510,9 +414,9 @@ img {
     padding: 0;
     text-align: center;
     text-transform: uppercase;
-    position: absolute; /* 使用绝对定位 */
-    left: 50%;  /* 水平居中 */
-    transform: translateX(-50%); /* 通过translateX调整完美居中 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 180px;
     z-index: 55;
 }
@@ -566,17 +470,17 @@ img {
 }
 #body.home .header div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
 	padding: 0;
-    width: 100%;        /* Make the image fill the width of the container */
-    height: 100%;       /* Make the image fill the height of the container */
-    object-fit: cover;  /* Ensures the image covers the entire area of the container without distortion */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #body.home .header div ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body.home .body {
@@ -666,7 +570,6 @@ img {
 	width: 440px;
 }
 
-/* Ensure the video container takes up the full width and height of its parent */
 #body.home .footer div ul li video{
     width: 100%;
     height: 100%;
@@ -695,7 +598,7 @@ img {
 }
 #body.home .footer div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -706,7 +609,7 @@ img {
 	clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
 }
 #body.home .footer div ul li a:hover img {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body.home .footer div ul li a span {
@@ -755,7 +658,7 @@ img {
 }
 #body.home .footer div ul li ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -763,7 +666,7 @@ img {
 	width: auto;
 }
 #body.home .footer div ul li ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body.home .footer div ul li ul li h1 {
@@ -812,6 +715,52 @@ img {
 #body.home .footer div ul li ul li a.more:hover {
 	background-color: #620031;
 }
+
+#scrollable-list {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(128, 208, 199, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 100;
+    width: 380px;
+    height: 450px;
+    overflow-y: auto;
+}
+
+#scrollable-list h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#scrollable-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#scrollable-list ul li {
+    margin: 10px 0;
+}
+
+#scrollable-list ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#scrollable-list ul li a:hover {
+    text-decoration: underline;
+}
+
 /*----------------------------------------body-styles---------------------------------------*/
 #body.about .header {
     background: url(../images/bg-about.jpg) no-repeat center top;
@@ -819,9 +768,9 @@ img {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; /* This ensures the background image covers the entire container */
-    background-position: center; /* Center the background image */
-    position: relative; /* 设置相对定位 */
+    background-size: cover;
+    background-position: center;
+    position: relative;
     z-index: 1;
 }
 
@@ -833,12 +782,12 @@ img {
     width: 51%;
     height: 85%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 2; /* 确保遮罩在背景图片之上 */
+    z-index: 2;
 }
 
 #body.about .header div {
     position: relative;
-    z-index: 3; /* 确保内容在遮罩上方 */
+    z-index: 3;
 }
 #body.about .header div, #body .header div {
 	margin: 0 auto;
@@ -859,7 +808,7 @@ img {
 	text-transform: uppercase;
 	width: 940px;
 	z-index: 3;
-	position: relative; /* 设置相对定位 */
+	position: relative;
 }
 #body.about .header div h2 {
 	color: #FFFFFF;
@@ -874,7 +823,7 @@ img {
 	text-transform: uppercase;
 	width: 820px;
 	z-index: 3;
-	position: relative; /* 设置相对定位 */
+	position: relative;
 }
 #body.about .header div p {
 	color: #ffffff;
@@ -888,7 +837,7 @@ img {
 	text-align: center;
 	width: 820px;
 	z-index: 3;
-	position: relative; /* 设置相对定位 */
+	position: relative;
 }
 #body.about .header div p a {
 	color: #ffffff;
@@ -962,7 +911,7 @@ img {
     margin: 0;
     padding: 0;
     width: 34%;
-    height: auto; /* 自动调整高度 */
+    height: auto;
     position: relative;
 }
 #body.about .footer {
@@ -1023,7 +972,7 @@ img {
 	margin: 0;
 	padding: 0;
     width: 34%;
-    height: auto; /* 自动调整高度 */
+    height: auto;
     position: relative;
 }
 #body.about .section {
@@ -1083,26 +1032,26 @@ img {
     padding: 0;
     width: 100%;
     background: url("../images/bg-home.jpg") repeat;
-    background-size: cover; /* This ensures the background image covers the entire container */
-    background-position: center; /* Center the background image */
-    position: relative; /* 设置相对定位 */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 #body .header::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%; /* 设置左侧位置 */
-    transform: translateX(-50%); /* 居中 */
-    width: 80%; /* 设置宽度 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 黑色背景 */
-    z-index: 1; /* 确保遮罩在背景图片之上 */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
 }
 
 #body .header div {
     position: relative;
-    z-index: 2; /* 确保内容在遮罩上方 */
+    z-index: 2;
 }
 
 #body .header div ul {
@@ -1133,7 +1082,7 @@ img {
 }
 #body .header div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -1141,7 +1090,7 @@ img {
 	width: 100%;
 }
 #body .header div ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body .header div ul li div {
@@ -1287,7 +1236,7 @@ img {
 }
 #body .header div .article ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -1296,7 +1245,7 @@ img {
 	height: 100%;
 }
 #body .header div .article ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body .header div .article ul li h1 {
@@ -1417,7 +1366,7 @@ img {
 }
 #body .header div .sidebar ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -1426,7 +1375,7 @@ img {
 	height: 100%;
 }
 #body .header div .sidebar ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body .header div .sidebar ul li h2 {
@@ -1481,7 +1430,7 @@ img {
 }
 #body .header div .sidebar ul li ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -1490,7 +1439,7 @@ img {
 	height: 100%;
 }
 #body .header div .sidebar ul li ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
 #body .header div .sidebar ul li ul li h2 {

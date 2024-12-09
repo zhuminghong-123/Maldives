@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -80,10 +79,28 @@
 				</ul>
 			</div>
 		</div>
+		<div id="scrollable-list">
+			<h2>Popular Destinations</h2>
+			<ul>
+				<li><a href="#">Replace all contents (images and text) from space science to Maldives</a></li>
+				<li><a href="#">Add several standalone pages for blog and destination details</a></li>
+				<li><a href="#">A welcome message able to be closed with button</a></li>
+				<li><a href="#">A panel showing the current weather of Maldives</a></li>
+				<li><a href="#">A quiz panel giving suggestion about destinations by considering user preference</a></li>
+				<li><a href="#">Replace the background image with a bigger one, remove a standalone image on the background</a></li>
+				<li><a href="#">Mask the h1 and h2 on homepage to increase readability</a></li>
+				<li><a href="#">Change the style of title text and logo text, add shadow to title text for readability</a></li>
+				<li><a href="#">Change the featured video to a style that can be played directly</a></li>
+				<li><a href="#">Use a wider background image in the about page, also add a mask to the title</a></li>
+				<li><a href="#">Change the dark background of the destinations page, the blog page and the contact page to the background image with a transparent mask</a></li>
+				<li><a href="#">Add a paragraph part in the contact page</a></li>
+				<li><a href="#">Link many contents (like images and readmore buttons) to the corresponding standalone pages</a></li>
+				<li><a href="#">Add many text describing the blogs and destinations in the standalone pages</a></li>
+			</ul>
+		</div>
 		<div id="body" class="home">
 			<div class="header">
 				<div>
-					<!-- <img src="images/maldives-beach.jpg" alt="Maldives Beach" class="satellite"> -->
 					<h1>WELCOME TO THE MALDIVES</h1>
 					<h2>THE PARADISE ON EARTH</h2>
 					<a href="blog.html" class="more">Read More</a>
@@ -166,10 +183,8 @@
 		var welcomeMessage = document.getElementById("welcome-message");
 		var dontShowAgain = sessionStorage.getItem("dontShowAgain");
 
-		// Clear the sessionStorage "dontShowAgain" key each time the page is refreshed
 		sessionStorage.removeItem("dontShowAgain");
 
-		// Show the welcome message
 		welcomeMessage.style.display = "block";
 
 		document.getElementById("close-welcome").addEventListener("click", function() {
@@ -177,15 +192,13 @@
 			sessionStorage.setItem("dontShowAgain", "true");
 		});
 
-		// Call the weather display function when the page loads
 		displayWeatherFromLocalStorage();
 	};
 
-	// Fetch current weather data from OpenWeatherMap API
 	function fetchWeather() {
 		const lat = 4.1755;
 		const lon = 73.5093;
-		const apiKey = '469ff3f91ce4acec1a2b0623c7040f4b'; // Replace with your OpenWeatherMap API key
+		const apiKey = '469ff3f91ce4acec1a2b0623c7040f4b'; 
 		const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
 		fetch(url)
@@ -198,11 +211,10 @@
 			.then(data => {
 				const weatherDescription = data.weather[0].description;
 				const temperatureKelvin = data.main.temp;
-				const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(2); // Convert Kelvin to Celsius
+				const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(2); 
 				document.getElementById('weather-description').textContent = `Description: ${weatherDescription}`;
 				document.getElementById('weather-temperature').textContent = `Temperature: ${temperatureCelsius}°C`;
 
-				// Store weather data in localStorage
 				localStorage.setItem('weatherData', JSON.stringify(data));
 				localStorage.setItem('weatherDataTimestamp', Date.now());
 			})
@@ -213,7 +225,6 @@
 			});
 	}
 
-	// Display weather from localStorage if it was fetched within the last 5 minutes
 	function displayWeatherFromLocalStorage() {
 		const weatherData = JSON.parse(localStorage.getItem('weatherData'));
 		const weatherDataTimestamp = localStorage.getItem('weatherDataTimestamp');
@@ -222,7 +233,6 @@
 			const currentTime = Date.now();
 			const timeDifference = currentTime - weatherDataTimestamp;
 
-			// If the weather data is less than 5 minutes old, use the cached data
 			if (timeDifference < 5 * 60 * 1000) {
 				const weatherDescription = weatherData.weather[0].description;
 				const temperatureKelvin = weatherData.main.temp;
@@ -233,23 +243,18 @@
 			}
 		}
 
-		// If the data is old or not available, fetch it again
 		fetchWeather();
 	}
 
-	// Handle the quiz and display island recommendations based on user input
 	document.getElementById('get-recommendation').addEventListener('click', function(event) {
-		event.preventDefault(); // Prevents the form from refreshing the page
+		event.preventDefault(); 
 
-		// Retrieve user preferences
 		const preference1 = document.getElementById('preference1').value;
 		const preference2 = document.getElementById('preference2').value;
 
-		// Check if both preferences are selected
 		if (preference1 && preference2) {
 			let recommendation = "";
 
-			// Simple logic to recommend an island based on preferences
 			if (preference1 === "luxury") {
 				recommendation = "Baros Maldives";
 			} else if (preference1 === "adventure" && preference2 === "diving") {
@@ -264,11 +269,9 @@
 				recommendation = "Baa Atoll";
 			}
 
-			// Display the result in the result div
 			const resultDiv = document.getElementById('result');
 			resultDiv.innerHTML = `<h3>Based on your answers, you should visit: ${recommendation}!</h3>`;
 		} else {
-			// Display a message if either preference is not selected
 			const resultDiv = document.getElementById('result');
 			resultDiv.innerHTML = `<h3>Please select both preferences to get a recommendation.</h3>`;
 		}
